@@ -1,0 +1,5 @@
+../Core/MCP39F511/mcp39f511.c:13:6:MCP39F511_Init	16	static
+../Core/MCP39F511/mcp39f511.c:23:6:MCP39F511_SendData	16	static
+../Core/MCP39F511/mcp39f511.c:28:6:MCP39F511_ListenDMA	16	static
+../Core/MCP39F511/mcp39f511.c:33:7:MCP39F511_WriteToReceiveRingBuffer	24	static
+../Core/MCP39F511/mcp39f511.c:44:6:MCP39F511_ReadReceiveBuffer	16	static
