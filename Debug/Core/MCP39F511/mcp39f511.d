@@ -1,0 +1,1 @@
+Core/MCP39F511/mcp39f511.o: ../Core/MCP39F511/mcp39f511.c
