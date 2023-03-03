@@ -49,6 +49,8 @@
 /* USER CODE BEGIN PV */
 uint8_t Length;
 uint8_t Message[16];
+
+MCP39F511_t MCP1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -96,8 +98,13 @@ int main(void)
   MX_USB_OTG_FS_PCD_Init();
   MX_UART4_Init();
   /* USER CODE BEGIN 2 */
-  Length = sprintf((char*)Message, "Siema");
-  HAL_UART_Transmit_DMA(&huart4, Message, Length);
+  //Length = sprintf((char*)Message, "Siema");
+  //HAL_UART_Transmit_DMA(&huart4, Message, Length);
+
+  MCP39F511_Init(&MCP1, &huart4);
+
+  MCP39F511_ReadData(&MCP1, VOLTAGE_RMS, 4);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */

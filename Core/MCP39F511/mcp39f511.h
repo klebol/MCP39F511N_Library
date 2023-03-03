@@ -25,6 +25,30 @@
 #define AUTO_CALIBRATE_REACTIVE_GAIN 0x7A
 #define AUTO_CALIBRATE_FREQENCY 0x76
 
+//
+//MCP39F511 Readable Register List
+//
+
+#define SYSTEM_STATUS 0x0002
+#define SYSTEM_VERSION 0x0004
+#define VOLTAGE_RMS 0x0006
+#define LINE_FREQUENCY 0x0008
+#define ADC_VOLTAGE 0x000A
+#define POWER_FACTOR 0x000C
+#define CURRENT_RMS 0x000E
+#define ACTIVE_POWER 0x0012
+#define REACTIVE_POWER 0x0016
+#define APPARENT_POWER 0x001A
+#define IMPORT_ACTIVE_ENERGY_COUNTER 0x001E
+#define EXPORT_ACTIVE_ENERGY_COUNTER 0x0026
+#define IMPORT_REACTIVE_ENERGY_COUNTER 0x002E
+#define EXPORT_REACTIVE_ENERGY_COUNTER 0x0036
+#define MINIMUM_RECORD_1 0x003E
+#define MINIMUM_RECORD_2 0x0043
+#define MAXIMUM_RECORD_1 0x004E
+#define MAXIMUM_RECORD_2 0x0052
+
+
 #define HEADER_BYTE 0xA5
 
 typedef struct{
@@ -40,6 +64,8 @@ typedef struct{
 	int16_t PowerFactor;
 }MCP39F511_t;
 
+void MCP39F511_Init(MCP39F511_t *IC, UART_HandleTypeDef *huart);						//Init function
+void MCP39F511_ReadData(MCP39F511_t *IC, uint16_t StartAddres, uint8_t NumberOfBytes); 	//Get data
 
 
 #endif /* MCP39F511_MCP39F511_H_ */
