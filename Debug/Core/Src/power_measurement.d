@@ -1,4 +1,5 @@
-Core/RingBuffer/RingBuffer.o: ../Core/RingBuffer/RingBuffer.c \
+Core/Src/power_measurement.o: ../Core/Src/power_measurement.c \
+ ../Core/Inc/power_measurement.h ../Core/Inc/mcp39f511n.h \
  ../Core/Inc/main.h ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -28,8 +29,9 @@ Core/RingBuffer/RingBuffer.o: ../Core/RingBuffer/RingBuffer.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h \
- ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h \
- ../Core/RingBuffer/RingBuffer.h
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
+../Core/Inc/power_measurement.h:
+../Core/Inc/mcp39f511n.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -61,4 +63,3 @@ Core/RingBuffer/RingBuffer.o: ../Core/RingBuffer/RingBuffer.c \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h:
-../Core/RingBuffer/RingBuffer.h:
